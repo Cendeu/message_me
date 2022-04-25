@@ -36,14 +36,15 @@
       </div>
       </div>
     <div class="extra content">
-      <form class="ui reply form">
+      <%= form_for(@message, html: {class: "ui reply form"}, role: "form", url: message_path, data: {turbo_method: :post}) do |f| %>
+
         <div class="field">
         <div class="ui input fluid icon">
-          <input type="text" placeholder="Send a message...">
-          <i class="bordered blue inverted icon paper plane"></i>
+          <%= f.text_field :body %>
+          <%= f.button '<i class="bordered blue inverted icon paper plane"> </i>'.html_safe %>
         </div>
         </div>
-      </form>
+      <% end %>
     </div>
   </div>
 

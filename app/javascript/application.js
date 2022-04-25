@@ -6,6 +6,11 @@ import "semantic-ui"
 
 
 
-$(function() {
+document.addEventListener("turbo:load", () => {
+    
     $('.ui.dropdown').dropdown();
-})
+});
+
+document.addEventListener("turbo:load", () => {
+    $('.message .close').on('click', function() {$(this).closest('.message').transition('fade');});
+});
