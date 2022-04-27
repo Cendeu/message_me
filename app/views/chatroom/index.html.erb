@@ -27,8 +27,8 @@
 <div class="twelve wide column">
 
   <div class="ui fluid raised card chatbox">
-    <div class="content">
-      <div class="ui feed">
+    <div class="content" id="messages">
+      <div class="ui feed" id="message-box">
         <h4 class="ui header">Test Chat</h4>
 
           <%= render @messages %>
@@ -36,7 +36,7 @@
       </div>
       </div>
     <div class="extra content">
-      <%= form_for(@message, html: {class: "ui reply form"}, role: "form", url: message_path, data: {turbo_method: :post}) do |f| %>
+      <%= form_for(@message, html: {class: "ui reply form"}, role: "form", url: message_path, remote: true, data: {turbo_method: :post}) do |f| %>
 
         <div class="field">
         <div class="ui input fluid icon">

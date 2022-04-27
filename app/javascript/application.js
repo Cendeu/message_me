@@ -3,14 +3,17 @@ import "@hotwired/turbo-rails"
 import "controllers"
 import "jquery"
 import "semantic-ui"
+import "./channels/index"
 
+window.scroll_bottom = function() {
+    if ($('#messages').length > 0) {
+        $('#messages').scrollTop($('#messages')[0].scrollHeight);
+    }
+}
 
 
 document.addEventListener("turbo:load", () => {
-    
     $('.ui.dropdown').dropdown();
-});
-
-document.addEventListener("turbo:load", () => {
     $('.message .close').on('click', function() {$(this).closest('.message').transition('fade');});
+    scroll_bottom()
 });
