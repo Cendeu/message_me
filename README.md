@@ -1,24 +1,3 @@
-# README
+A very basic message app made using full stack rails, mostly to learn ActionCable(websocket) and practice. 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Mostly functional, needs the signup system finished, and deployed to heroku (mostly to learn Redis).
